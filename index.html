@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO PULSES ESTE BOTÓN</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: red;
+            text-shadow: 0 0 10px red;
+        }
+
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 15px red;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px red;
+        }
+
+        #mensaje {
+            display: none;
+            margin-top: 20px;
+            font-size: 2em;
+            color: yellow;
+            text-shadow: 0 0 10px yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>NO PULSES EL BOTÓN</h1>
+    <button onclick="mostrarMensaje()">¡NO ME PULSES!</button>
+    <div id="mensaje">Has perdido el juego por puto subnormal</div>
+
+    <script>
+        function mostrarMensaje() {
+            const mensaje = document.getElementById('mensaje');
+            mensaje.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
